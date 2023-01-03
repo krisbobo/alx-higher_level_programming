@@ -1,6 +1,6 @@
 # 0x08-python-more_classes
 
-* We examine the following: *
+*We examine the following:*
 
 - What is OOP
 - "first-class everything"

@@ -1,5 +1,5 @@
+
 #!/usr/bin/python3
-# 101-stats.py
 
 """Reads from standard input and computes metrics.
 After every ten lines or the input of a keyboard interruption (CTRL + C),
@@ -19,9 +19,9 @@ def print_stats(size, status_codes):
     for key in sorted(status_codes):
         print("{}: {}".format(key, status_codes[key]))
 
+
 if __name__ == "__main__":
     import sys
-
     size = 0
     status_codes = {}
     valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']

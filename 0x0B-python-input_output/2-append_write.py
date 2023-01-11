@@ -1,30 +1,16 @@
 #!/usr/bin/python3
-# 2-read_lines.py
+# 4-append_write.py
 
-"""Defines a text file-reading function."""
+"""Defines a file-appending function."""
 
 
-def read_lines(filename="", nb_lines=0):
-    """Print a given number of lines from a UTF8 text file to stdout.
+def append_write(filename="", text=""):
+    """Appends a string to the end of a UTF8 text file.
     Args:
-        filename (str): The name of the file.
-        nb_lines (int): The number of lines to read from the file.
+        filename (str): The name of the file to append to.
+        text (str): The string to append to the file.
+    Returns:
+        The number of characters appended.
     """
-    with open(filename, encoding="utf-8") as f:
-        if nb_lines <= 0:
-            print(f.read(), end="")
-            return
-
-        lines = 0
-        for line in f:
-            lines += 1
-        f.seek(0)
-        if nb_lines >= lines:
-            print(f.read(), end="")
-            return
-
-        else:
-            n = 0
-            while n < nb_lines:
-                print(f.readline(), end="")
-                n += 1
+    with open(filename, "a", encoding="utf-8") as f:
+        return f.write(text)
